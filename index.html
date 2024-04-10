@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Energy Production Prediction</title>
+    <style>
+        body{
+            background-color: grey;
+            background: contain;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 700;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #heading1{
+            background-color:rgb(0, 255, 255);
+            box-shadow: 2px 5px black;
+            font-size: 30px;
+            text-align: center;
+        }
+        .form1{
+            margin-top: 30px;
+        }
+        .btn{
+            text-align: center;
+        }
+        .info{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="heading1">Predict Energy Production</div>
+
+    <div class="container">
+        <div class="info">
+            <h1>Enter the Data</h1>
+        </div>
+        <div class="formclass">
+            <form class="form1" action="/predict" method="post">
+                <label for="temperature">Temperature:</label>
+                <input type="text" id="temperature" name="temperature"><br><br>
+                
+                <label for="exhaust_vacuum">Exhaust Vacuum:</label>
+                <input type="text" id="exhaust_vacuum" name="exhaust_vacuum"><br><br>
+                
+                <label for="amb_pressure">Ambient Pressure:</label>
+                <input type="text" id="amb_pressure" name="amb_pressure"><br><br>
+                
+                <label for="r_humidity">Relative Humidity:</label>
+                <input type="text" id="r_humidity" name="r_humidity"><br><br>
+                
+                <input class="btn" type="submit" value="Predict">
+            </form>
+        </div>
+    
+        
+    </div>
+</body>
+</html>
